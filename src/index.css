@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    @apply bg-neutral-900;
+  }
+  
+  body {
+    @apply antialiased text-neutral-100 bg-neutral-900 tracking-tight;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  #root {
+    @apply bg-neutral-900;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-display-large font-bold text-primary-pink;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl lg:text-display font-bold text-primary-purple;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl lg:text-display-small font-medium text-primary-orange;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 rounded-full 
+           transition-all duration-200 font-medium text-base sm:text-lg;
+  }
+
+  .btn-primary {
+    @apply bg-primary-purple text-white hover:bg-primary-purple/90 
+           shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-purple/80 hover:bg-primary-purple/20
+           text-primary-purple hover:text-white shadow-lg hover:shadow-xl
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .section {
+    @apply py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-900;
+  }
+
+  .nav-link {
+    @apply text-neutral-400 hover:text-white transition-colors duration-200
+           px-3 sm:px-4 py-2 text-sm sm:text-base font-medium;
+  }
+
+  .container {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+  }
+  
+  .stat-card {
+    @apply p-6 sm:p-8 rounded-2xl bg-neutral-800 shadow-lg hover:shadow-xl transition-all duration-300
+           transform hover:scale-[1.02] hover:bg-gradient-to-br from-neutral-800 to-neutral-900;
+  }
+  
+  .feature-card {
+    @apply p-6 sm:p-8 rounded-2xl bg-neutral-800/50 transition-all duration-300 
+           shadow-lg hover:shadow-xl transform hover:scale-[1.02] cursor-pointer 
+           backdrop-blur-sm border border-neutral-700/50 hover:border-primary-purple/30
+           hover:bg-neutral-800 hover:shadow-primary-purple/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-900 to-primary-600;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+}
+
+/* Custom hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(142, 60, 203, 0.2);
+}
+
+.feature-card:hover {
+  border-color: rgba(142, 60, 203, 0.3);
+}
+
+.feature-card:hover h3 {
+  @apply text-primary-purple;
+}
+
+.feature-card:hover p {
+  @apply text-neutral-300;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-600;
+}
+
+:root {
+  font-family: 'Varela Round', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
