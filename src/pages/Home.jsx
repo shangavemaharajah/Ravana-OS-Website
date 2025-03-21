@@ -10,8 +10,8 @@ export default function Home() {
       <Hero />
       <KeyPillars />
       <Features />
-      <DeveloperCTA />
-      <EarlyAdopters />
+      {/* <DeveloperCTA /> */}
+      {/* <EarlyAdopters /> */}
     </>
   )
 }

@@ -43,7 +43,7 @@ const GetStarted = () => {
         return (
           <div className="space-y-6">
             <div>
-              <label htmlFor="businessName" className="block text-sm font-medium text-neutral-300 mb-2">Business Name*</label>
+              <label htmlFor="businessName" className="block text-m font-medium text-neutral-300 mb-2 text-left">Business Name*</label>
               <input
                 type="text"
                 id="businessName"
@@ -55,13 +55,13 @@ const GetStarted = () => {
               />
             </div>
             <div>
-              <label htmlFor="employeeCount" className="block text-sm font-medium text-neutral-300 mb-2">Number of Employees*</label>
+              <label htmlFor="employeeCount" className="block text-m font-medium text-neutral-300 mb-2 text-left">Number of Employees*</label>
               <select
                 id="employeeCount"
                 name="employeeCount"
                 value={formData.employeeCount}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                className="text-sm w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                 required
               >
                 <option value="">Select range</option>
@@ -73,13 +73,13 @@ const GetStarted = () => {
               </select>
             </div>
             <div>
-              <label htmlFor="industry" className="block text-sm font-medium text-neutral-300 mb-2">Industry*</label>
+              <label htmlFor="industry" className="block text-m font-medium text-neutral-300 mb-2 text-left">Industry*</label>
               <select
                 id="industry"
                 name="industry"
                 value={formData.industry}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                className="text-sm w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                 required
               >
                 <option value="">Select industry</option>
@@ -89,24 +89,52 @@ const GetStarted = () => {
               </select>
             </div>
             <div>
-              <label htmlFor="country" className="block text-sm font-medium text-neutral-300 mb-2">Country*</label>
-              <input
-                type="text"
-                id="country"
-                name="country"
-                value={formData.country}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                required
-              />
-            </div>
+  <label htmlFor="country" className="block text-m font-medium text-neutral-300 mb-2 text-left">
+    Country*
+  </label>
+  <select
+    id="country"
+    name="country"
+    value={formData.country}
+    onChange={handleInputChange}
+    className="text-sm w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+    required
+  >
+    <option value="">Select a country</option>
+    {[
+      "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
+      "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia",
+      "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia",
+      "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)",
+      "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Democratic Republic of the Congo", "Denmark", "Djibouti",
+      "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini",
+      "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala",
+      "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland",
+      "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos",
+      "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia",
+      "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia",
+      "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger",
+      "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea",
+      "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis",
+      "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
+      "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa",
+      "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan",
+      "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
+      "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City",
+      "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+    ].map((country) => (
+      <option key={country} value={country}>{country}</option>
+    ))}
+  </select>
+</div>
+
           </div>
         );
       case 2:
         return (
           <div className="space-y-6">
             <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-neutral-300 mb-2">First Name*</label>
+              <label htmlFor="firstName" className="block text-m font-medium text-neutral-300 mb-2 text-left">First Name*</label>
               <input
                 type="text"
                 id="firstName"
@@ -118,7 +146,7 @@ const GetStarted = () => {
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-neutral-300 mb-2">Last Name*</label>
+              <label htmlFor="lastName" className="block text-m font-medium text-neutral-300 mb-2 text-left">Last Name*</label>
               <input
                 type="text"
                 id="lastName"
@@ -130,7 +158,7 @@ const GetStarted = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-neutral-300 mb-2">Business Email*</label>
+              <label htmlFor="email" className="block text-m font-medium text-neutral-300 mb-2 text-left">Business Email*</label>
               <input
                 type="email"
                 id="email"
@@ -142,7 +170,7 @@ const GetStarted = () => {
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-neutral-300 mb-2">Contact Number*</label>
+              <label htmlFor="phone" className="block text-m font-medium text-neutral-300 mb-2 text-left">Contact Number*</label>
               <input
                 type="tel"
                 id="phone"
@@ -231,13 +259,13 @@ const GetStarted = () => {
             <div className="flex items-center justify-between mb-8">
               {[1, 2, 3].map((item) => (
                 <div key={item} className="flex items-center">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                  <div className={`w-10 h-8 rounded-full flex items-center justify-center ${
                     step >= item ? 'bg-purple-600 text-white' : 'bg-neutral-700 text-neutral-400'
                   }`}>
                     {item}
                   </div>
                   {item < 3 && (
-                    <div className={`w-24 h-1 ${
+                    <div className={`w-72 h-1 ${
                       step > item ? 'bg-purple-600' : 'bg-neutral-700'
                     }`} />
                   )}

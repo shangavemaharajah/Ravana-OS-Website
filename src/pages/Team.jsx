@@ -2,22 +2,59 @@ import React from 'react';
 
 const Team = () => {
   const teamMembers = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      bio: "Leading the vision for next-generation human-computer interaction"
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Chief Technology Officer",
-      bio: "Pioneering AI-driven interfaces and natural computing"
-    },
-    {
-      name: "Dr. Emma Thompson",
-      role: "Head of Research",
-      bio: "Advancing the boundaries of ambient computing"
-    }
-  ];
+  {
+    name: "Dr. Sarah Chen",
+    role: "Chief Executive Officer",
+    bio: "Leading the vision for next-generation human-computer interaction"
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "Chief Technology Officer",
+    bio: "Pioneering AI-driven interfaces and natural computing"
+  },
+  {
+    name: "Dr. Emma Thompson",
+    role: "Head of Research",
+    bio: "Advancing the boundaries of ambient computing"
+  },
+  {
+    name: "Janakan Mahendrarajah",
+    role: "Senior UI/UX Designer",
+    link: "https://www.linkedin.com/in/janakanmahendrarajah/",
+    // bio: "Crafting intuitive user experiences that bridge humans and technology"
+  },
+  {
+    name: "Mohamed Rusaik",
+    role: "Associate Software Engineer",
+    link: "https://www.linkedin.com/in/mohamed-rusaik/",
+    // bio: "Exploring deep learning applications for real-world solutions"
+  },
+  {
+    name: "Dhananjaya Jayalath Ranasinghe Dissanayake",
+    role: "Intern - Fullstack Developer",
+    link: "https://www.linkedin.com/in/dhananjayadissanayake/",
+    // bio: "Designing scalable systems for future-ready platforms"
+  },
+  {
+    name: "Shayeed Wajee",
+    role: "Intern - Fullstack Developer",
+    link: "https://www.linkedin.com/in/shayeed-wajee/",
+    // bio: "Turning complex data into actionable insights"
+  },
+  {
+    name: " Adambarage Akash Gimhan De Alwis",
+    role: "Intern - Fullstack Developer",
+    link: "https://www.linkedin.com/in/akash-de-alwis-976a82284/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    // bio: "Ensuring seamless coordination between innovation and execution"
+  },
+  {
+    name: "Shangave Maharajah",
+    role: "Intern - Fullstack Developer",
+    link: "https://www.linkedin.com/in/shangave-maharajah29/",
+    // bio: "Upholding product quality through rigorous testing and precision"
+  }
+];
+
 
   return (
     <div className="page-transition bg-neutral-900">
@@ -47,6 +84,19 @@ const Team = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-purple-400 font-medium mb-4">{member.role}</p>
                 <p className="text-neutral-300">{member.bio}</p>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {member.link && (
+                    <a
+                      href={member.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-3 text-sm text-purple-200  hover:text-purple-300 transition"
+                    >
+                      Visit LinkedIn Profile
+                    </a>
+                  )}
+                </h3>
+
               </div>
             ))}
           </div>
@@ -63,9 +113,14 @@ const Team = () => {
             <p className="text-xl text-neutral-300 mb-12">
               Help us build the future of computing. We're always looking for exceptional talent to join our mission.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
+            <a
+              href="https://www.linkedin.com/company/ravanaindustries/jobs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
+            >
               View Open Positions
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -80,16 +135,33 @@ const Team = () => {
             <div className="p-8 bg-neutral-800/50 rounded-xl backdrop-blur-sm border border-neutral-700 hover:bg-neutral-800 transition-all">
               <h3 className="text-2xl font-bold mb-4 text-white">Pathurjan Wijeyasekara</h3>
               <p className="text-purple-400 font-medium mb-4">Chief Executive Officer</p>
-              <p className="text-neutral-300">
+              <p className="text-neutral-300 mb-4">
                 A filmmaker, tech-savvy founder, and visionary who has built multiple startups to fuel this ambitious journey.
               </p>
+              <a
+                href="https://www.linkedin.com/in/pathurjan" // Replace with the actual LinkedIn URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-200 hover:underline font-semibold"
+              >
+                Visit LinkedIn Profile
+              </a>
             </div>
+
             <div className="p-8 bg-neutral-800/50 rounded-xl backdrop-blur-sm border border-neutral-700 hover:bg-neutral-800 transition-all">
               <h3 className="text-2xl font-bold mb-4 text-white">Joel Jerushan</h3>
               <p className="text-purple-400 font-medium mb-4">Chief Technology Officer</p>
               <p className="text-neutral-300">
                 A TechCrunch-featured software engineer and one of Sri Lanka's top technical minds, partnering with Pathurjan for over 8 years.
               </p>
+              <a
+                href="https://www.linkedin.com/in/jerushan/" // Replace with the actual LinkedIn URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-200 hover:underline font-semibold"
+              >
+                Visit LinkedIn Profile
+              </a>
             </div>
             <div className="p-8 bg-neutral-800/50 rounded-xl backdrop-blur-sm border border-neutral-700 hover:bg-neutral-800 transition-all">
               <h3 className="text-2xl font-bold mb-4 text-white">Shopeha Pashkaran</h3>
@@ -97,6 +169,14 @@ const Team = () => {
               <p className="text-neutral-300">
                 A corporate HR expert managing operations and ensuring the funding and structure behind our innovation.
               </p>
+              <a
+                href="https://www.linkedin.com/in/shopeha-pathurjan-294255217/" // Replace with the actual LinkedIn URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-200 hover:underline font-semibold"
+              >
+                Visit LinkedIn Profile
+              </a>
             </div>
             <div className="p-8 bg-neutral-800/50 rounded-xl backdrop-blur-sm border border-neutral-700 hover:bg-neutral-800 transition-all">
               <h3 className="text-2xl font-bold mb-4 text-white">Vathsan Sharma</h3>
@@ -104,6 +184,14 @@ const Team = () => {
               <p className="text-neutral-300">
                 A robotics engineer turned branding specialist, trained at Miami Ad School, driving our global outreach.
               </p>
+              <a
+                href="https://www.linkedin.com/in/pathurjan" // Replace with the actual LinkedIn URL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-200 hover:underline font-semibold"
+              >
+                Visit LinkedIn Profile
+              </a>
             </div>
           </div>
         </div>

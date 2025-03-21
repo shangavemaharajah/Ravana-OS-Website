@@ -31,9 +31,14 @@ const Investors = () => {
               <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
                 RavanaOS is set to disrupt traditional, siloed business solutions by unifying disparate systems into one intelligent ecosystem. With proven traction in our home market and a scalable vision for global expansion, we invite investors to join us in revolutionizing digital business.
               </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity">
-                Contact Investors
-              </button>
+              <a
+                href="https://app.reclaim.ai/m/patu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                Book a call
+              </a>
             </div>
 
             {/* Key Metrics */}

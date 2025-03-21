@@ -77,9 +77,10 @@ const PillarSection = ({ pillar }) => {
         <h2 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-3 text-white" style={{ color: pillar.color }}>
           {pillar.title}
         </h2>
-        <p className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-neutral-400 whitespace-nowrap">
           {pillar.description}
         </p>
+
       </div>
 
       <div className="relative h-[400px] sm:h-[600px] lg:h-[800px] mx-4 rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl border border-neutral-700/50">
@@ -105,21 +106,26 @@ const PillarSection = ({ pillar }) => {
         <div className="absolute inset-0">
           {/* Tab Navigation */}
           <div className="flex justify-center pt-4 sm:pt-8 px-4">
-            <div className="w-full max-w-md bg-neutral-800/90 rounded-full p-1 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-x-auto hide-scrollbar border border-neutral-700/50">
-              <div className="flex flex-nowrap items-center justify-start sm:justify-center gap-1 px-1">
+            <div className="w-full max-w-2xl bg-neutral-800/90 rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-x-auto hide-scrollbar border border-neutral-700/50">
+              <div className="flex flex-nowrap items-center justify-start sm:justify-center gap-4 px-1">
                 {pillar.subtopics.map((tab, idx) => (
                   <TabButton
-                    key={idx}
-                    active={activeTab === idx}
-                    onClick={() => setActiveTab(idx)}
-                    sectionColor={pillar.color}
-                  >
-                    {tab.title}
-                  </TabButton>
+                  key={idx}
+                  active={activeTab === idx}
+                  onClick={() => setActiveTab(idx)}
+                  sectionColor={pillar.color}
+                  className={`p-2 whitespace-nowrap text-base ${
+                    idx === 0 || idx === 1 ? 'w-[200px] justify-center' : ''
+                  }`}
+                >
+                  {tab.title}
+                </TabButton>
+                
                 ))}
               </div>
             </div>
           </div>
+
 
           {/* Content Area */}
           <div className="absolute bottom-4 sm:bottom-8 lg:bottom-12 left-4 sm:left-8 lg:left-12 right-4 sm:right-8 lg:right-12">
