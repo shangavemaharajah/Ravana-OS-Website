@@ -10,6 +10,9 @@ import Contact from './pages/Contact'
 import GetStarted from './pages/GetStarted'
 import RavanaOS from './pages/RavanaOS'
 import './index.css'
+import CookiePolicy from './pages/CookiePolicy'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsAndConditions from './pages/TermsAndCondition'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,9 @@ const router = createBrowserRouter([
       { path: 'investors', element: <Investors /> },
       { path: 'contact', element: <Contact /> },
       { path: 'get-started', element: <GetStarted /> },
+      { path: 'cookie', element: <CookiePolicy /> },
+      { path: 'privacy', element: <PrivacyPolicy /> },
+      { path: 'terms', element: <TermsAndConditions /> },
     ],
   },
 ])

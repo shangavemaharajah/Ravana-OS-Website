@@ -23,16 +23,16 @@ const Contact: React.FC = () => {
     <div className="bg-neutral-900 text-white">
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center">Contact Us</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center mt-10">Contact Us</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
             {/* Name Field */}
             <div className="mb-4">
-              <label htmlFor="name" className="block text-m font-medium text-neutral-300 mb-2 text-left">
+              <label htmlFor="name" className="block text-m font-medium text-neutral-300 mb-2 ml-2 text-left">
                 Name
               </label>
               <input
                 id="name"
-                className={`w-full px-4 py-3 bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3  bg-neutral-700/50 border border-neutral-600 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all ${
                   errors.name ? 'border-red-500' : ''
                 }`}
                 placeholder="Your name"
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
 
             {/* Email Field */}
             <div className="mb-4">
-              <label htmlFor="email" className="block text-m font-medium text-neutral-300 mb-2 text-left">
+              <label htmlFor="email" className="block text-m font-medium text-neutral-300 mb-2 ml-2 text-left">
                 Email
               </label>
               <input
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
 
             {/* Message Field */}
             <div className="mb-6">
-              <label htmlFor="message" className="block text-m font-medium text-neutral-300 mb-2 text-left">
+              <label htmlFor="message" className="block text-m font-medium text-neutral-300 mb-2 ml-2 text-left">
                 Message
               </label>
               <textarea

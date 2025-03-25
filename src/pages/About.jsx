@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="page-transition bg-neutral-900">
       {/* Hero Section */}
-      <section className="min-h-[90vh] relative flex items-center justify-center bg-black text-white overflow-hidden">
+      <section className="min-h-[60vh] sm:min-h-[100vh] relative flex items-center justify-center bg-black text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)]" />
         </div>
@@ -160,11 +160,15 @@ const About = () => {
               {/* <button className="w-full sm:w-auto btn bg-primary-purple text-white hover:bg-primary-purple/90 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
                 Learn More About Our Technology
               </button> */}
-              <a href="https://discord.gg/mKHCUeEax9" target="_blank" rel="noopener noreferrer">
-  <button className="w-full sm:w-auto btn bg-primary-purple border-2 border-white/20 hover:border-white/40 text-white hover:scale-[1.02] transition-all duration-300">
-    Join Our Community
-  </button>
-</a>
+              <a
+                href="https://discord.gg/mKHCUeEax9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="w-48 sm:w-auto btn bg-primary-purple border-2 border-white/20 hover:border-white/40 text-white hover:scale-[1.02] transition-all duration-300">
+                  Join Our Community
+                </button>
+              </a>
 
             </div>
           </div>

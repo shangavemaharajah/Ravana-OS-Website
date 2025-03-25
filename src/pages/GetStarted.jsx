@@ -235,16 +235,15 @@ const GetStarted = () => {
   return (
     <div className="page-transition bg-neutral-900 min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-[90vh] relative flex items-center justify-center bg-black text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)]" />
+      <section className="min-h-[60vh] sm:min-h-[100vh] relative flex items-center justify-center bg-black text-white overflow-hidden">      <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] " />
         </div>
         <div className="container relative py-24">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="animate-fade-in text-4xl sm:text-5xl lg:text-display-large mb-6 sm:mb-8 text-white leading-tight">
               Get Started with RavanaOS
             </h1>
-            <p className="animate-slide-up text-lg sm:text-xl text-neutral-300 max-w-2xl mx-auto">
+            <p className="animate-slide-up text-lg sm:text-xl text-neutral-300 max-w-2xl mx-auto ">
               Join the future of intelligent business computing. Complete the form below to begin your journey.
             </p>
           </div>
@@ -252,24 +251,26 @@ const GetStarted = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 bg-neutral-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
+      <section className="py-2 bg-neutral-900">
+        <div className="container mx-auto px-4 ">
+          <div className="max-w-2xl mx-auto ">
             {/* Progress Steps */}
             <div className="flex items-center justify-between mb-8">
               {[1, 2, 3].map((item) => (
-                <div key={item} className="flex items-center">
-                  <div className={`w-10 h-8 rounded-full flex items-center justify-center ${
-                    step >= item ? 'bg-purple-600 text-white' : 'bg-neutral-700 text-neutral-400'
-                  }`}>
-                    {item}
-                  </div>
-                  {item < 3 && (
-                    <div className={`w-72 h-1 ${
-                      step > item ? 'bg-purple-600' : 'bg-neutral-700'
-                    }`} />
-                  )}
+                <div key={item} className="flex items-center justify-between">
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                  step >= item ? 'bg-purple-600 text-white' : 'bg-neutral-700 text-neutral-400'
+                }`}>
+                  {item}
                 </div>
+                {item < 3 && (
+                  <div className={`w-32 sm:w-72  md:w-72 h-1 ${
+                    step > item ? 'bg-purple-600' : 'bg-neutral-700'
+                  }`} />
+                )}
+              </div>
+              
+              
               ))}
             </div>
 
@@ -292,7 +293,7 @@ const GetStarted = () => {
                   <button
                     type="button"
                     onClick={nextStep}
-                    className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity ml-auto"
+                    className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity mx-auto sm:w-auto md:w-3/4 lg:w-1/2 xl:w-full 2xl:w-3/4"
                   >
                     Next
                   </button>
