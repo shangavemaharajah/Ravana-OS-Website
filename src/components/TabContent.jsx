@@ -107,24 +107,24 @@ const PillarSection = ({ pillar }) => {
 
         <div className="absolute inset-0">
           {/* Tab Navigation */}
-            <div className="w-full max-w-2xl bg-neutral-800/90 rounded-2xl p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-x-auto hide-scrollbar border border-neutral-700/50">
-              <div className=" flex-nowrap items-center justify-start sm:justify-center gap-4 px-3 ">
-                {pillar.subtopics.map((tab, idx) => (
-                  <TabButton
-                  key={idx}
-                  active={activeTab === idx}
-                  onClick={() => setActiveTab(idx)}
-                  sectionColor={pillar.color}
-                  className={`p-2 whitespace-nowrap text-base ${
-                    idx === 0 || idx === 1 ? 'w-[200px] justify-center' : ''
-                  }`}
-                >
-                  {tab.title}
-                </TabButton>
-                
-                ))}
-              </div>
-            </div>
+          <div className="w-full max-w-2xl bg-neutral-800/90 rounded-2xl p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-x-auto hide-scrollbar border border-neutral-700/50 mx-auto">
+  <div className="flex-nowrap items-center justify-start sm:justify-center gap-4 px-3 ">
+    {pillar.subtopics.map((tab, idx) => (
+      <TabButton
+        key={idx}
+        active={activeTab === idx}
+        onClick={() => setActiveTab(idx)}
+        sectionColor={pillar.color}
+        className={`p-2 whitespace-nowrap text-base ${
+          idx === 0 || idx === 1 ? 'w-[200px] justify-center' : ''
+        }`}
+      >
+        {tab.title}
+      </TabButton>
+    ))}
+  </div>
+</div>
+
           
 
 
