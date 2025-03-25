@@ -21,24 +21,22 @@ import userLevelImage from '../img/User Level .jpg';
 
 const TabButton = ({ active, children, onClick, sectionColor }) => (
   <button
-  onClick={onClick}
-  className={`px-4 py-2 rounded-full transition-all duration-300 ease-in-out
-    ${active
-      ? 'transform scale-105 shadow-lg'
-      : 'hover:bg-neutral-700'
-    }
-    sm:px-6 sm:py-3 md:px-8 md:py-4 xl:px-10 xl:py-5`}
-  style={{
-    backgroundColor: active ? sectionColor : 'transparent',
-    color: active ? '#171717' : '#d4d4d4',
-    boxShadow: active ? `0 0 20px ${sectionColor}40` : 'none',
-    transform: active ? 'scale(1.05)' : 'scale(1)',
-    border: active ? 'none' : '1px solid rgba(255, 255, 255, 0.1)'
-  }}
->
-  {children}
-</button>
-
+    onClick={onClick}
+    className={`px-4 py-2 rounded-full transition-all duration-300 ease-in-out
+      ${active 
+        ? 'transform scale-105 shadow-lg' 
+        : 'hover:bg-neutral-700'
+      }`}
+    style={{
+      backgroundColor: active ? sectionColor : 'transparent',
+      color: active ? '#171717' : '#d4d4d4',
+      boxShadow: active ? `0 0 20px ${sectionColor}40` : 'none',
+      transform: active ? 'scale(1.05)' : 'scale(1)',
+      border: active ? 'none' : '1px solid rgba(255, 255, 255, 0.1)'
+    }}
+  >
+    {children}
+  </button>
 );
 
 const PillarSection = ({ pillar }) => {
@@ -79,10 +77,9 @@ const PillarSection = ({ pillar }) => {
         <h2 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-3 text-white" style={{ color: pillar.color }}>
           {pillar.title}
         </h2>
-        <p className="text-base sm:text-lg lg:text-xl text-neutral-400 whitespace-nowrap">
+        <p className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto">
           {pillar.description}
         </p>
-
       </div>
 
       <div className="relative h-[400px] sm:h-[600px] lg:h-[800px] mx-4 rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl border border-neutral-700/50">
@@ -107,29 +104,26 @@ const PillarSection = ({ pillar }) => {
 
         <div className="absolute inset-0">
           {/* Tab Navigation */}
-          <div className="w-full max-w-2xl bg-neutral-800/90 rounded-2xl p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-x-auto hide-scrollbar border border-neutral-700/50 mx-auto">
-  <div className="flex-nowrap items-center justify-start sm:justify-center gap-4 px-3 ">
-    {pillar.subtopics.map((tab, idx) => (
-      <TabButton
-        key={idx}
-        active={activeTab === idx}
-        onClick={() => setActiveTab(idx)}
-        sectionColor={pillar.color}
-        className={`p-2 whitespace-nowrap text-base ${
-          idx === 0 || idx === 1 ? 'w-[200px] justify-center' : ''
-        }`}
-      >
-        {tab.title}
-      </TabButton>
-    ))}
+          <div className="flex flex-col sm:flex-row justify-center pt-4 sm:pt-8 px-4"> 
+  <div className="w-full max-w-md bg-neutral-800/90 rounded-lg p-2 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-x-auto hide-scrollbar border border-neutral-700/50">
+    <div className="flex flex-col sm:flex-row items-center  justify-start sm:justify-center gap-1 px-1">
+      {pillar.subtopics.map((tab, idx) => (
+        <TabButton
+          key={idx}
+          active={activeTab === idx}
+          onClick={() => setActiveTab(idx)}
+          sectionColor={pillar.color}
+        >
+          {tab.title}
+        </TabButton>
+      ))}
+    </div>
   </div>
 </div>
 
-          
-
 
           {/* Content Area */}
-          <div className=" bottom-0 sm:bottom-8 lg:bottom-12 left-4 sm:left-8 lg:left-12 right-4 sm:right-8 lg:right-12">
+          <div className="absolute sm:bottom-8 lg:bottom-12 left-4 sm:left-8 lg:left-12 right-4 sm:right-8 lg:right-12">
             {pillar.subtopics.map((tab, idx) => (
               <div
                 key={idx}
@@ -139,8 +133,8 @@ const PillarSection = ({ pillar }) => {
                     : 'opacity-0 absolute pointer-events-none transform translate-y-4'
                 }`}
               >
-                <div className="space-y-3 sm:space-y-4 lg:space-y-6 p-4 sm:p-6 lg:p-8 rounded-xl bg-neutral-800/20 backdrop-blur-md border border-neutral-700/10">
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+                <div className=" space-y-0 sm:space-y-4 lg:space-y-6 p-1 sm:p-6 lg:p-8 rounded-xl bg-neutral-800/20 backdrop-blur-md border border-neutral-700/10">
+                  <h3 className=" text-xl sm:text-2xl lg:text-3xl font-bold text-white">
                     {tab.title}
                   </h3>
                   <p className="text-sm sm:text-base lg:text-xl text-neutral-300 leading-relaxed whitespace-pre-line">
