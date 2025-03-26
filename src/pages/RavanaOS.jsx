@@ -742,21 +742,25 @@ const RavanaOS = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Schedule a Demo", icon: "🎯" },
-              { title: "Download Community Edition", icon: "⬇️" },
-              { title: "Talk to an Expert", icon: "💬" },
-              { title: "Join Developer Community", icon: "👥" }
-            ].map((action, idx) => (
-              <button
-                key={idx}
-                className="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 hover:bg-neutral-700/50 transition-all text-left"
-              >
-                <span className="text-2xl mb-2 block">{action.icon}</span>
-                <h3 className="text-lg font-bold text-white">{action.title}</h3>
-              </button>
-            ))}
-          </div>
+  {[
+    { title: "Schedule a Demo", icon: "🎯", link: "https://app.reclaim.ai/m/patu" },
+    { title: "Download Community Edition", icon: "⬇️", link: "https://example.com/download" },
+    { title: "Talk to an Expert", icon: "💬", link: "https://app.reclaim.ai/m/patu" },
+    { title: "Join Developer Community", icon: "👥", link: "https://discord.com/channels/@me/1336920669878747136/1351437619552194651" }
+  ].map((action, idx) => (
+    <a
+      key={idx}
+      href={action.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-6 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 hover:bg-neutral-700/50 transition-all text-left block"
+    >
+      <span className="text-2xl mb-2 block">{action.icon}</span>
+      <h3 className="text-lg font-bold text-white">{action.title}</h3>
+    </a>
+  ))}
+</div>
+
         </div>
       </section>
     </div>

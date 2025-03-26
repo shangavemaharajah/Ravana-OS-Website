@@ -22,7 +22,7 @@ import userLevelImage from '../img/User Level .jpg';
 const TabButton = ({ active, children, onClick, sectionColor }) => (
   <button
     onClick={onClick}
-    className={`px-4 py-2 rounded-full transition-all duration-300 ease-in-out
+    className={`px-4 py-2 rounded-sm transition-all duration-300 ease-in-out
       ${active 
         ? 'transform scale-105 shadow-lg' 
         : 'hover:bg-neutral-700'
@@ -133,7 +133,7 @@ const PillarSection = ({ pillar }) => {
                     : 'opacity-0 absolute pointer-events-none transform translate-y-4'
                 }`}
               >
-                <div className=" space-y-0 sm:space-y-4 lg:space-y-6 p-1 sm:p-6 lg:p-8 rounded-xl bg-neutral-800/20 backdrop-blur-md border border-neutral-700/10">
+                <div className=" space-y-0 sm:space-y-4 lg:space-y-6 p-1 sm:p-6 lg:p-8 rounded-class bg-neutral-800/20 backdrop-blur-md border border-neutral-700/10">
                   <h3 className=" text-xl sm:text-2xl lg:text-3xl font-bold text-white">
                     {tab.title}
                   </h3>

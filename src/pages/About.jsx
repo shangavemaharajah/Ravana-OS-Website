@@ -49,7 +49,7 @@ const About = () => {
             <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow-xl">
               <div className="w-full h-full bg-gradient-to-tr from-neutral-800 to-neutral-900 p-8 flex items-center justify-center">
               <img
-                src="/dist/assets/Business Concept Team Close Up.jpg"
+                src="/dist/assets/Cost-Effective-BmJUbQVi.jpg"
                 alt="Your Image"
                 className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
               />
