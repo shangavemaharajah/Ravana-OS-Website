@@ -49,7 +49,7 @@ const About = () => {
             <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow-xl">
               <div className="w-full h-full bg-gradient-to-tr from-neutral-800 to-neutral-900 p-8 flex items-center justify-center">
                 <img
-                  src="src/img/Business Concept Team Close Up.jpg" // Update the path as needed
+                  src="/src/img/image.jpg" // Update the path as needed
                   alt="Your Image"
                   className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
                 />
