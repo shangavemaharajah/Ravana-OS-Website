@@ -46,11 +46,16 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow-xl">
-                <div className="w-full h-full bg-gradient-to-tr from-neutral-800 to-neutral-900 p-8">
-                  <div className="w-full h-full rounded-2xl bg-gradient-to-tr from-primary-purple/10 to-primary-pink/10 hover:scale-105 transition-transform duration-500" />
-                </div>
+            <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow-xl">
+              <div className="w-full h-full bg-gradient-to-tr from-neutral-800 to-neutral-900 p-8 flex items-center justify-center">
+                <img
+                  src="src/img/Business Concept Team Close Up.jpg" // Update the path as needed
+                  alt="Your Image"
+                  className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                />
               </div>
+            </div>
+
               <div className="absolute -bottom-8 -right-8 bg-neutral-800 text-white p-6 sm:p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 border border-neutral-700/50">
                 <p className="text-lg sm:text-xl font-medium text-primary-purple">Pioneering Tomorrow</p>
                 <p className="text-neutral-400">Through Innovation</p>

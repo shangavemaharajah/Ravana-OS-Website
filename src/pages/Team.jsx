@@ -2,21 +2,7 @@ import React from 'react';
 
 const Team = () => {
   const teamMembers = [
-  {
-    name: "Dr. Sarah Chen",
-    role: "Chief Executive Officer",
-    bio: "Leading the vision for next-generation human-computer interaction"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Chief Technology Officer",
-    bio: "Pioneering AI-driven interfaces and natural computing"
-  },
-  {
-    name: "Dr. Emma Thompson",
-    role: "Head of Research",
-    bio: "Advancing the boundaries of ambient computing"
-  },
+
   {
     name: "Janakan Mahendrarajah",
     role: "Senior UI/UX Designer",
